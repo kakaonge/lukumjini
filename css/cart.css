@@ -1,4 +1,3 @@
-
 /* --- 1. CORE VARIABLES --- */
 :root {
     --bg-color: #f8f9fa;
@@ -172,14 +171,49 @@ h1 {
     text-align: center; margin-bottom: -2vw; width: 100%;
 }
 
+/* --- 5. MOBILE MEDIA QUERIES (FIXED) --- */
 @media (max-width: 1024px) {
     .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 4rem; }
 }
+
 @media (max-width: 768px) {
-    .cart-container { grid-template-columns: 1fr; padding: 12vh 2rem 4rem 2rem; gap: 3rem; }
-    nav { padding: 1.5rem 2rem; }
-    h1 { font-size: 2.5rem; }
-    .footer-large { padding: 3rem 2rem 0 2rem; }
+    /* Main Layout */
+    .cart-container { grid-template-columns: 1fr; padding: 12vh 1.5rem 4rem 1.5rem; gap: 3rem; }
+    
+    /* Navbar Constraints */
+    nav { 
+        padding: 1.5rem 1.5rem; 
+        width: 100vw; 
+        max-width: 100%; 
+        overflow: hidden; 
+    }
+    
+    h1 { font-size: 2.5rem; margin-bottom: 1.5rem; }
+    
+    /* FIXED: Cart Item Grid */
+    .cart-item { 
+        /* Changes to 2 columns: smaller image on left, details on right */
+        grid-template-columns: 80px 1fr; 
+        gap: 1.5rem; 
+    }
+    
+    .item-img { width: 80px; height: 100px; }
+    
+    /* Drops the price below the title/actions instead of forcing a 3rd column */
+    .item-price { 
+        grid-column: 2; 
+        text-align: left; 
+        margin-top: 0.5rem; 
+        font-weight: 600;
+    }
+
+    /* Allows buttons to wrap naturally if screen is super narrow */
+    .item-actions { flex-wrap: wrap; gap: 1rem; }
+    
+    /* Footer Adjustments */
+    .footer-large { padding: 3rem 1.5rem 0 1.5rem; }
     .footer-grid { grid-template-columns: 1fr; gap: 3rem; }
-    .big-type-footer { font-size: 17vw; } 
+    
+    /* Shrunk to prevent horizontal scrolling */
+    .big-type-footer { font-size: 14vw; } 
 }
