@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Selection | Cart</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@200;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/cart.css">
+   
+</head>
+<body>
+
+    <div class="fog-container">
+        <div class="fog-blob blob-1"></div>
+        <div class="fog-blob blob-2"></div>
+    </div>
+
+    <nav>
+        <a href="index.html" class="back-link hover-trigger">
+            <span>&larr;</span> Continue Shopping
+        </a>
+        <div class="nav-controls">
+            <div class="cart-status"></div>
+        </div>
+    </nav>
+
+    <main class="cart-container reveal">
+        <h1>Your Selection</h1>
+
+        <div class="cart-items" id="cartItems">
+            </div>
+
+        <div class="cart-summary">
+            <div class="summary-row">
+                <span>Subtotal</span>
+                <span id="subtotal">KES 0</span>
+            </div>
+            <div class="summary-row">
+                <span>Shipping (Nairobi)</span>
+                <span>KES 350</span>
+            </div>
+            <div class="summary-row">
+                <span>Tax (16%)</span>
+                <span id="tax">KES 0</span>
+            </div>
+            <div class="summary-row total">
+                <span>Total</span>
+                <span id="total">KES 0</span>
+            </div>
+
+            <button class="checkout-btn hover-trigger">Proceed to Checkout</button>
+            <p style="margin-top: 1rem; font-size: 0.7rem; color: var(--text-muted); text-align: center;">
+                Secure payment via M-Pesa or Card.
+            </p>
+        </div>
+    </main>
+
+    <footer class="footer-large reveal">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Lukumjini Collective</h4>
+                <p>Curating the new wave of Nairobi's design avant-garde. A digital showroom for the bold.</p>
+                <p style="margin-top: 1rem;">&copy; 2026 Lukumjini ,All rights reserved.</p>
+                    <p> Powered by Elcinco Africa .</p>
+            </div>
+            <div class="footer-col">
+                <h4>Headquarters</h4>
+                <p>Nairobi, Kenya</p>
+            </div>
+            <div class="footer-col">
+                <h4>Assistance</h4>
+                <ul>
+                    <li><a href="#" class="hover-trigger">Shipping Policy</a></li>
+                    <li><a href="#" class="hover-trigger">Returns & Exchanges</a></li>
+                    <li><a href="#" class="hover-trigger">Track Order</a></li>
+                    <li><a href="#" class="hover-trigger">Size Guides</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Socials</h4>
+                <ul>
+                    <li><a href="#" class="hover-trigger">Instagram</a></li>
+                    <li><a href="#" class="hover-trigger">Twitter / X</a></li>
+                    <li><a href="#" class="hover-trigger">Spotify Playlist</a></li>
+                    <li><a href="#" class="hover-trigger">Newsletter</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="big-type-footer">LUKUMJINI</div>
+    </footer>
+
+    <script src="js/cart.js"></script>
+</body>
+</html>
